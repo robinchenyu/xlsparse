@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="{{ LANGUAGE_CODE }}"{% if LANGUAGE_BIDI %} dir="rtl"{% endif %}>
+{% load pages_tags mezzanine_tags i18n future staticfiles %}
+<head>
+
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
+<meta name="description" content="{% block meta_description %}{% endblock %}">
+<title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
+<link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
+
+
+{% compress css %}
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+{% block extra_css %}{% endblock %}
+{% endcompress %}
+
+{% compress js %}
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<!-- <script src="{% static "js/jquery-1.8.3.min.js"%}"></script> -->
+<!-- <script src="{% static "js/bootstrap.js" %}"></script> -->
+<!-- <script src="{% static "js/bootstrap-extras.js" %}"></script> -->
+{% block extra_js %}{% endblock %}
+{% endcompress %}
+<!--[if lt IE 9]>
+<script src="{% static "js/html5shiv.js" %}"></script>
+<![endif]-->
+
+{% block extra_head %}{% endblock %}
+
+</head>
+<body id="{% block body_id %}body{% endblock %}">
+
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner">
+<div class="container">
+    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </a>
+    {% if settings.SITE_TITLE %}<a class="brand" href="/">{{ settings.SITE_TITLE }}</a>{% endif %}
+    {% if settings.SITE_TAGLINE %}<p class="navbar-text">{{ settings.SITE_TAGLINE }}</p>{% endif %}
+    <div class="nav-collapse collapse">
+<!--         {% page_menu "pages/menus/dropdown.html" %}
+        {% nevercache %}
+        {% include "accounts/includes/user_panel.html" %}
+        {% endnevercache %} -->
+    </div>
+</div>
+</div>
+</div>
+
+<div class="container">
+
+{% nevercache %}
+{% for message in messages %}
+<div id="message" class="alert alert-{{ message.tags }}" data-alert="alert">
+    <a class="close" href="#" onclick="$(this).parent().fadeOut('fast'); return false;">×</a>{{ message }}
+</div>
+{% endfor %}
+{% endnevercache %}
+
+
+<h1>{% block title %}{% endblock %}</h1>
+
+<ul class="breadcrumb">
+<div class="row">
+    <div class="span12">
+    {% spaceless %}
+
+    <div class="span3">
+<!--     {% block breadcrumb_menu %}
+    <a href="/">首页</a>
+    {% endblock %} -->
+    </div>
+    <div class="span8">
+      {% block search_menu %}
+      {% endblock %}
+    </div>
+
+    {% endspaceless %}
+    </div>
+
+</div>
+
+</ul>
+
+</div>
+
+
+<div class="container">
+  {% block main %}{% endblock %}
+</div>
+
+<footer>
+<!-- <div class="container">
+{% page_menu "pages/menus/footer.html" %}
+</div> -->
+</footer>
+
+
+
+<!-- {% include "includes/footer_scripts.html" %} -->
+
+</body>
+</html>

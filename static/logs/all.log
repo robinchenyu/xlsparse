@@ -1,0 +1,239 @@
+2014-02-26 14:34:49,470 [Thread-3:-1238369472] [xls.views:47] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-02-26 14:34:49,477 [Thread-3:-1238369472] [xls.views:49] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-02-26 14:34:49,477 [Thread-3:-1238369472] [xls.views:15] [DEBUG]- handle_uploaded_file: data.xls
+2014-02-26 14:34:49,477 [Thread-3:-1238369472] [xls.views:40] [DEBUG]- [Errno 2] No such file or directory: 'uploads/xls/file.xls'
+2014-02-26 14:36:01,476 [Thread-3:-1238369472] [xls.views:47] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-02-26 14:36:01,478 [Thread-3:-1238369472] [xls.views:49] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-02-26 14:36:01,478 [Thread-3:-1238369472] [xls.views:15] [DEBUG]- handle_uploaded_file: data.xls
+2014-02-26 14:36:01,478 [Thread-3:-1238369472] [xls.views:40] [DEBUG]- [Errno 2] No such file or directory: '/home/robin/Env/xls/project/static/media/uploads/xls/file.xls'
+2014-02-26 14:40:33,050 [Thread-3:-1239418048] [xls.views:49] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-02-26 14:40:33,058 [Thread-3:-1239418048] [xls.views:51] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-02-26 14:40:33,058 [Thread-3:-1239418048] [xls.views:15] [DEBUG]- handle_uploaded_file: data.xls
+2014-02-26 14:40:33,058 [Thread-3:-1239418048] [xls.views:39] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/static/media/uploads/xls/file.xls
+2014-02-26 14:47:38,463 [Thread-3:-1238369472] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-02-26 14:47:38,473 [Thread-3:-1238369472] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-02-26 14:47:38,473 [Thread-3:-1238369472] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-02-26 14:47:39,238 [Thread-3:-1238369472] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/static/media/uploads/xls/file.xls
+2014-02-26 14:51:04,191 [Thread-3:-1238369472] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-02-26 14:51:04,192 [Thread-3:-1238369472] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-02-26 14:51:04,193 [Thread-3:-1238369472] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-02-26 14:51:04,210 [Thread-3:-1238369472] [xls.views:44] [DEBUG]- global name 'os' is not defined
+2014-02-26 14:51:33,420 [Thread-3:-1238369472] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-02-26 14:51:33,421 [Thread-3:-1238369472] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-02-26 14:51:33,421 [Thread-3:-1238369472] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-02-26 14:51:34,154 [Thread-3:-1238369472] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/static/media/uploads/xls/file.xls
+2014-02-27 13:56:40,466 [Thread-4:-1238369472] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-02-27 13:56:40,490 [Thread-4:-1238369472] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-02-27 13:56:40,490 [Thread-4:-1238369472] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-02-27 13:56:41,258 [Thread-4:-1238369472] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/static/media/uploads/xls/file.xls
+2014-02-27 13:56:41,258 [Thread-4:-1238369472] [django.request:226] [ERROR]- Internal Server Error: /xls201402/
+Traceback (most recent call last):
+  File "/home/robin/Env/xls/lib/python2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/robin/Env/xls/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/robin/Env/xls/project/xls/views.py", line 77, in upload_xls
+    return _upload_xls(request)
+  File "/home/robin/Env/xls/project/xls/views.py", line 57, in _upload_xls
+    ret,file_name, file_url = handle_uploaded_file(file1, "uploads/xls")
+ValueError: need more than 2 values to unpack
+2014-02-27 13:56:41,837 [Thread-5:-1238369472] [django.request:145] [WARNING]- Not Found: /favicon.ico
+2014-02-27 14:00:33,677 [Thread-3:-1238369472] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-02-27 14:00:33,678 [Thread-3:-1238369472] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-02-27 14:00:33,678 [Thread-3:-1238369472] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-02-27 14:00:34,423 [Thread-3:-1238369472] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/static/media/uploads/xls/file.xls
+2014-02-27 14:01:06,817 [Thread-3:-1238369472] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-02-27 14:01:06,823 [Thread-3:-1238369472] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-02-27 14:01:06,823 [Thread-3:-1238369472] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-02-27 14:01:07,556 [Thread-3:-1238369472] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/static/media/uploads/xls/file.xls
+2014-02-27 14:01:32,927 [Thread-1:-1238369472] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-02-27 14:01:32,928 [Thread-1:-1238369472] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-02-27 14:01:32,928 [Thread-1:-1238369472] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-02-27 14:01:33,678 [Thread-1:-1238369472] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/static/media/uploads/xls/file.xls
+2014-02-27 14:05:00,196 [Thread-3:-1238369472] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-02-27 14:05:00,200 [Thread-3:-1238369472] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-02-27 14:05:00,205 [Thread-3:-1238369472] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-02-27 14:05:00,927 [Thread-3:-1238369472] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/static/media/uploads/xls/file.xls
+2014-02-27 14:07:50,319 [Thread-1:-1238369472] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-02-27 14:07:50,320 [Thread-1:-1238369472] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-02-27 14:07:50,320 [Thread-1:-1238369472] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-02-27 14:07:51,078 [Thread-1:-1238369472] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/static/media/uploads/xls/file.xls
+2014-02-27 14:16:26,540 [Thread-3:-1238369472] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-02-27 14:16:26,545 [Thread-3:-1238369472] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-02-27 14:16:26,545 [Thread-3:-1238369472] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-02-27 14:16:27,337 [Thread-3:-1238369472] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/static/media/uploads/xls/file.xls
+2014-02-27 14:16:37,945 [Thread-5:-1238369472] [django.request:145] [WARNING]- Not Found: /media/uploads/xls/out.csv
+2014-02-27 14:37:37,610 [Thread-4:-1238369472] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-02-27 14:37:37,612 [Thread-4:-1238369472] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-02-27 14:37:37,612 [Thread-4:-1238369472] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-02-27 14:37:38,395 [Thread-4:-1238369472] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/static/media/uploads/xls/file.xls
+2014-02-27 14:47:35,268 [Thread-1:-1239418048] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-02-27 14:47:35,274 [Thread-1:-1239418048] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-02-27 14:47:35,275 [Thread-1:-1239418048] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-02-27 14:47:35,986 [Thread-1:-1239418048] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/static/media/uploads/xls/file.xls
+2014-02-27 14:49:47,608 [Thread-5:-1238422720] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-02-27 14:49:47,609 [Thread-5:-1238422720] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-02-27 14:49:47,609 [Thread-5:-1238422720] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-02-27 14:49:48,347 [Thread-5:-1238422720] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/static/media/uploads/xls/file.xls
+2014-02-27 14:50:23,553 [Thread-4:-1238369472] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-02-27 14:50:23,555 [Thread-4:-1238369472] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {}> user AnonymousUser
+2014-02-27 14:50:23,555 [Thread-4:-1238369472] [xls.views:16] [DEBUG]- handle_uploaded_file: None
+2014-02-27 14:50:38,653 [Thread-5:-1238369472] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-02-27 14:50:38,661 [Thread-5:-1238369472] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-02-27 14:50:38,663 [Thread-5:-1238369472] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-02-27 14:50:39,438 [Thread-5:-1238369472] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/static/media/uploads/xls/file.xls
+2014-02-27 14:53:30,580 [Thread-9:-1238369472] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-02-27 14:53:30,588 [Thread-9:-1238369472] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-02-27 14:53:30,589 [Thread-9:-1238369472] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-02-27 14:53:31,495 [Thread-9:-1238369472] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/static/media/uploads/xls/file.xls
+2014-02-27 15:09:29,450 [Thread-4:-1239418048] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-02-27 15:09:29,452 [Thread-4:-1239418048] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-02-27 15:09:29,452 [Thread-4:-1239418048] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-02-27 15:09:30,165 [Thread-4:-1239418048] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-02-27 15:10:00,453 [Thread-6:-1239418048] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-02-27 15:10:00,455 [Thread-6:-1239418048] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-02-27 15:10:00,455 [Thread-6:-1239418048] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-02-27 15:10:01,229 [Thread-6:-1239418048] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-02-27 15:10:31,992 [Thread-9:-1239418048] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-02-27 15:10:32,000 [Thread-9:-1239418048] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-02-27 15:10:32,001 [Thread-9:-1239418048] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-02-27 15:10:32,864 [Thread-9:-1239418048] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-03 14:10:09,791 [Thread-3:-1239418048] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-03 14:10:09,810 [Thread-3:-1239418048] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-03 14:10:09,810 [Thread-3:-1239418048] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-03 14:10:10,546 [Thread-3:-1239418048] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-03 14:13:40,857 [Thread-1:-1238369472] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-03 14:13:40,859 [Thread-1:-1238369472] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-03 14:13:40,859 [Thread-1:-1238369472] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-03 14:13:41,664 [Thread-1:-1238369472] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-03 14:13:52,224 [Thread-4:-1238369472] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-03 14:13:52,232 [Thread-4:-1238369472] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-03 14:13:52,233 [Thread-4:-1238369472] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-03 14:13:53,040 [Thread-4:-1238369472] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 13:35:28,423 [Thread-1:-1238369472] [django.request:145] [WARNING]- Not Found: /
+2014-03-13 13:35:28,566 [Thread-3:-1238369472] [django.request:145] [WARNING]- Not Found: /favicon.ico
+2014-03-13 13:35:28,593 [Thread-4:-1238369472] [django.request:145] [WARNING]- Not Found: /favicon.ico
+2014-03-13 13:36:28,941 [Thread-7:-1238369472] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 13:36:28,943 [Thread-7:-1238369472] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 13:36:28,943 [Thread-7:-1238369472] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 13:36:29,679 [Thread-7:-1238369472] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 14:05:39,480 [Thread-10:-1238369472] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 14:05:39,488 [Thread-10:-1238369472] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 14:05:39,488 [Thread-10:-1238369472] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 14:05:40,156 [Thread-10:-1238369472] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 14:15:41,052 [Thread-24:-1238369472] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 14:15:41,054 [Thread-24:-1238369472] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 14:15:41,054 [Thread-24:-1238369472] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 14:15:41,772 [Thread-24:-1238369472] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 14:16:35,586 [Thread-26:-1238369472] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 14:16:35,587 [Thread-26:-1238369472] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 14:16:35,588 [Thread-26:-1238369472] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 14:16:36,219 [Thread-26:-1238369472] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 14:16:51,532 [Thread-28:-1238369472] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 14:16:51,541 [Thread-28:-1238369472] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 14:16:51,542 [Thread-28:-1238369472] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 14:16:52,395 [Thread-28:-1238369472] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 14:23:43,530 [Thread-1:-1238369472] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 14:23:43,532 [Thread-1:-1238369472] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 14:23:43,532 [Thread-1:-1238369472] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 14:23:44,353 [Thread-1:-1238369472] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 14:24:15,236 [Thread-5:-1238369472] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 14:24:15,240 [Thread-5:-1238369472] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 14:24:15,241 [Thread-5:-1238369472] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 14:24:15,952 [Thread-5:-1238369472] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 14:25:03,722 [Thread-1:-1238369472] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 14:25:03,723 [Thread-1:-1238369472] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 14:25:03,724 [Thread-1:-1238369472] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 14:25:04,508 [Thread-1:-1238369472] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 14:26:41,038 [Thread-1:-1238369472] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 14:26:41,039 [Thread-1:-1238369472] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 14:26:41,039 [Thread-1:-1238369472] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 14:26:41,732 [Thread-1:-1238369472] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 14:48:31,711 [Thread-1:-1239418048] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 14:48:31,712 [Thread-1:-1239418048] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 14:48:31,712 [Thread-1:-1239418048] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 14:48:32,585 [Thread-1:-1239418048] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 14:49:28,739 [Thread-4:-1239418048] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 14:49:28,740 [Thread-4:-1239418048] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 14:49:28,741 [Thread-4:-1239418048] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 14:49:29,319 [Thread-4:-1239418048] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 14:50:28,381 [Thread-6:-1239418048] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 14:50:28,382 [Thread-6:-1239418048] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 14:50:28,382 [Thread-6:-1239418048] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 14:50:29,164 [Thread-6:-1239418048] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 14:51:51,767 [Thread-1:-1239418048] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 14:51:51,768 [Thread-1:-1239418048] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 14:51:51,769 [Thread-1:-1239418048] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 14:51:52,612 [Thread-1:-1239418048] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 14:57:13,940 [Thread-4:-1239418048] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 14:57:13,941 [Thread-4:-1239418048] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 14:57:13,941 [Thread-4:-1239418048] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 14:57:14,623 [Thread-4:-1239418048] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 14:58:05,791 [Thread-6:-1239418048] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 14:58:05,792 [Thread-6:-1239418048] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 14:58:05,793 [Thread-6:-1239418048] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 14:58:06,597 [Thread-6:-1239418048] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 15:00:05,917 [Thread-8:-1239418048] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 15:00:05,918 [Thread-8:-1239418048] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 15:00:05,919 [Thread-8:-1239418048] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 15:00:06,695 [Thread-8:-1239418048] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 15:00:51,649 [Thread-10:-1239418048] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 15:00:51,650 [Thread-10:-1239418048] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 15:00:51,650 [Thread-10:-1239418048] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 15:00:52,433 [Thread-10:-1239418048] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 15:01:15,212 [Thread-12:-1239418048] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 15:01:15,213 [Thread-12:-1239418048] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 15:01:15,213 [Thread-12:-1239418048] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 15:01:15,956 [Thread-12:-1239418048] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 15:01:28,468 [Thread-14:-1239418048] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 15:01:28,470 [Thread-14:-1239418048] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 15:01:28,470 [Thread-14:-1239418048] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 15:01:29,202 [Thread-14:-1239418048] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 15:01:57,899 [Thread-16:-1239418048] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 15:01:57,900 [Thread-16:-1239418048] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 15:01:57,901 [Thread-16:-1239418048] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 15:01:58,604 [Thread-16:-1239418048] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 15:06:00,831 [Thread-18:-1239418048] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 15:06:00,833 [Thread-18:-1239418048] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 15:06:00,833 [Thread-18:-1239418048] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 15:06:01,641 [Thread-18:-1239418048] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 15:07:46,646 [Thread-20:-1239418048] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 15:07:46,647 [Thread-20:-1239418048] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 15:07:46,647 [Thread-20:-1239418048] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 15:07:47,478 [Thread-20:-1239418048] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 15:08:14,282 [Thread-22:-1239418048] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 15:08:14,283 [Thread-22:-1239418048] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 15:08:14,284 [Thread-22:-1239418048] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 15:08:15,135 [Thread-22:-1239418048] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 15:08:44,760 [Thread-24:-1239418048] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 15:08:44,761 [Thread-24:-1239418048] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 15:08:44,761 [Thread-24:-1239418048] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 15:08:45,444 [Thread-24:-1239418048] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 15:10:09,856 [Thread-26:-1239418048] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 15:10:09,857 [Thread-26:-1239418048] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 15:10:09,857 [Thread-26:-1239418048] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 15:10:10,609 [Thread-26:-1239418048] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 15:10:24,924 [Thread-28:-1239418048] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 15:10:24,925 [Thread-28:-1239418048] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 15:10:24,925 [Thread-28:-1239418048] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 15:10:25,681 [Thread-28:-1239418048] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 15:10:37,557 [Thread-30:-1239418048] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 15:10:37,558 [Thread-30:-1239418048] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 15:10:37,559 [Thread-30:-1239418048] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 15:10:38,375 [Thread-30:-1239418048] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 15:10:57,393 [Thread-32:-1239418048] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 15:10:57,394 [Thread-32:-1239418048] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 15:10:57,394 [Thread-32:-1239418048] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 15:10:58,179 [Thread-32:-1239418048] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 15:11:15,889 [Thread-34:-1239418048] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 15:11:15,890 [Thread-34:-1239418048] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 15:11:15,890 [Thread-34:-1239418048] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 15:11:16,706 [Thread-34:-1239418048] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 15:15:27,320 [Thread-36:-1239418048] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 15:15:27,322 [Thread-36:-1239418048] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 15:15:27,322 [Thread-36:-1239418048] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 15:15:28,216 [Thread-36:-1239418048] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls
+2014-03-13 15:17:11,175 [Thread-38:-1239418048] [xls.views:51] [DEBUG]- enter CVFile POST view... AnonymousUser
+2014-03-13 15:17:11,176 [Thread-38:-1239418048] [xls.views:53] [DEBUG]- upload_view POST request.FILES <MultiValueDict: {u'file': [<InMemoryUploadedFile: data.xls (application/vnd.ms-excel)>]}> user AnonymousUser
+2014-03-13 15:17:11,176 [Thread-38:-1239418048] [xls.views:16] [DEBUG]- handle_uploaded_file: data.xls
+2014-03-13 15:17:12,087 [Thread-38:-1239418048] [xls.views:41] [DEBUG]- handle_uploaded_file name:data.xls size 54784 write as /home/robin/Env/xls/project/xls/static/media/uploads/xls/file.xls

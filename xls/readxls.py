@@ -6,10 +6,10 @@ from xlrd.timemachine import REPR
 
 
 def check(ts):
-	BEGIN_TIME = time_to_int("09:00")
+	BEGIN_TIME = time_to_int("08:00")
 	MID1_TIME  = time_to_int("12:00")
 	MID2_TIME  = time_to_int("14:00")
-	END_TIME   = time_to_int("18:00")
+	END_TIME   = time_to_int("19:00")
 
 	if len(ts) <= 0:
 		return 0
@@ -74,15 +74,20 @@ def resolv(file1):
 	print sheet.ncols, sheet.nrows
         out_file = os.path.join(os.path.dirname(file1), "out.csv")
         form = []
+        origin_form = []
+
 	with open(out_file, 'w') as f:
-		for rx in xrange(2, sheet.nrows):
+                for rx in xrange(2, sheet.nrows):
+                        sum1 = 0
                         form_row = []
+                        origin_row = []
 			for cx in xrange( sheet.ncols):
 				cell = sheet.cell_value(rx, cx)
 				if cx <2 or rx < 3:
 					f.write(cell.encode("utf-8"))
 					f.write(",\t")
                                         form_row.append(cell.encode("utf-8"))
+                                        origin_row.append(cell.encode("utf-8"))
 					continue
 
 				timelist = cell.split('\r\n')
@@ -91,11 +96,15 @@ def resolv(file1):
 				print "Column label at (rowx=%d, colx=%d) is %d" %\
 					(rx, cx, ms)
 				f.write("%d,\t" % (ms))
+                                sum1 += ms
                                 form_row.append(ms)
+                                origin_row.append('\n'.join([x for x in timelist if len(x) > 3]))
 			f.write("\n")
+                        form_row.append(sum1)
                         form.append(form_row)
+                        origin_form.append(origin_row)
 
-        return "out.csv", form
+        return "out.csv", form, origin_form
 
 if __name__ == '__main__':
 	book = xlrd.open_workbook('./data.xls')

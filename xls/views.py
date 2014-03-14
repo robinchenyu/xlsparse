@@ -37,9 +37,9 @@ def handle_uploaded_file(f, default_path='uploads'):
                 with open(path_file, "wb+") as fn:
                     for chunk in f.chunks():
                         fn.write(chunk)
-                out_file, form = resolv(path_file)
+                out_file, form, origin_form = resolv(path_file)
             logger.debug('handle_uploaded_file name:{} size {} write as {}'.format(f.name, f.size, path_file))
-            return True, out_file, os.path.join(settings.STATIC_URL, "media/%s/%s" % (default_path, out_file)), form
+            return True, out_file, os.path.join(settings.STATIC_URL, "media/%s/%s" % (default_path, out_file)), form, origin_form
     except Exception as e:
         logger.debug(e)
     return False, "", ""
@@ -54,7 +54,7 @@ def _upload_xls(request):
     print('upload_view POST request.FILES {} user {}'.format(request.FILES, request.user))
     file1 = request.FILES.get('file')
     # import pdb;pdb.set_trace()
-    ret,file_name, file_url, form = handle_uploaded_file(file1, "uploads/xls")
+    ret,file_name, file_url, form, origin_form = handle_uploaded_file(file1, "uploads/xls")
 
     # if os.path.exists(file_name):
 
@@ -63,6 +63,7 @@ def _upload_xls(request):
     ctx['file_name'] = file_name
     ctx['file_url'] = file_url
     ctx['form'] = form
+    ctx['origin_form'] = origin_form
     return render_to_response("xls/xls_download.html", ctx, context_instance=RequestContext(request))
 
 @csrf_exempt

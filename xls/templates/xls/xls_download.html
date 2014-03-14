@@ -16,11 +16,13 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 
-
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-
+<script src="https://rawgithub.com/mkoryak/floatThead/master/dist/jquery.floatThead.min.js"></script>
+<script type="text/javascript" language="javascript">
+$('table.demo2').floatThead();
+</script>
 
 
 </head>
@@ -32,13 +34,23 @@
 
 <div class="row">
    <div class="col-xs-12 col-sm-6 col-md-8">
-  <table class="table table-striped">
-    {% for row in form %}
+     <div class="gimme-table" data-cls="demo2">
+     <table class="table demo2 floatThead-table" style="margin-top:25px;" >
+      {% for row in form %}
         {% if forloop.first %}
+          <colgroup>
+            {% for cell in row %}
+              {% if forloop.counter < 3 %}
+                <col style="width: 60px;">
+              {% else %}
+                <col style="width: 46px;">
+              {% endif %}
+            {% endfor %}
+          </colgroup>
     <thead>
-          <tr>
+          <tr class="size-row">
           {% for cell in row %}
-            <th>{{cell}}</th>
+            <th class="floatThead-col"></th>
           {% endfor %}
           </tr>
     </thead>
@@ -47,7 +59,7 @@
           <tr>
           {% for cell in row %}
           {% if cell < 180 %}
-            <td style="color:red;">{{cell }}</td>
+            <td style="color:red;">{{ cell }}</td>
             {% else %}
             <td >{{cell }}</td>
             {% endif %}
@@ -59,6 +71,36 @@
     {% endfor %}
 
   </table>
+  <div style="overflow: hidden; position: fixed; margin-top: 0px; top: 5px;" class="floatThead-container">
+    <table class="table demo2 floatThead-table" style="margin: 0px;">
+          <colgroup>
+          {% for row in form %}
+            {% if forloop.first %}
+              {% for cell in row %}
+            {% if forloop.counter < 3 %}
+            <col style="width: 60px;">
+            {% else %}
+            <col style="width: 46px;">
+            {% endif %}
+              {% endfor %}
+          {% endif %}
+          {% endfor %}
+
+          </colgroup>
+      <thead>
+        <tr>
+          {% for row in form %}
+            {% if forloop.first %}
+              {% for cell in row %}
+                <th><a id="demoHeader1" href="#">{{cell}}</a></th>
+              {% endfor %}
+          {% endif %}
+          {% endfor %}
+        </tr>
+      </thead>
+    </table>
+  </div>
+     </div>
    </div>
 
    <div class="col-xs-6 col-md-4">
@@ -84,6 +126,8 @@
        </div>
      </form>
   <a href="{{file_url}}">{{file_name}}</a>
+
+
    </div>
 </div>
 

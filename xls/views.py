@@ -12,7 +12,7 @@ from readxls import resolv
 import logging
 logger = logging.getLogger(__name__)
 
-def handle_uploaded_file(f, default_path='uploads'):
+def handle_uploaded_file(f, default_path='uploads', s="08:00", e="19:00"):
     logger.debug("handle_uploaded_file: {}".format(f))
     try:
         if f:
@@ -37,7 +37,7 @@ def handle_uploaded_file(f, default_path='uploads'):
                 with open(path_file, "wb+") as fn:
                     for chunk in f.chunks():
                         fn.write(chunk)
-                out_file, form, origin_form = resolv(path_file)
+                out_file, form, origin_form = resolv(path_file, s, e)
             logger.debug('handle_uploaded_file name:{} size {} write as {}'.format(f.name, f.size, path_file))
             return True, out_file, os.path.join(settings.STATIC_URL, "media/%s/%s" % (default_path, out_file)), form, origin_form
     except Exception as e:
@@ -50,11 +50,18 @@ def _upload_xls(request):
     '''
     logger.debug('enter CVFile POST view... {}'.format(request.user))
 
-    logger.debug('upload_view POST request.FILES {} user {}'.format(request.FILES, request.user))
+    start_time = request.POST.get("start_time", "08:00")
+    end_time = request.POST.get("end_time", "19:00")
+    if len(start_time) < 5:
+        start_time = "08:00"
+    if len(end_time) < 5:
+        end_time = "19:00"
+
+    logger.debug('upload_view POST request.FILES {} user {} start {} end {}, {}'.format(request.FILES, request.user, start_time, end_time, request.POST))
     print('upload_view POST request.FILES {} user {}'.format(request.FILES, request.user))
     file1 = request.FILES.get('file')
     # import pdb;pdb.set_trace()
-    ret,file_name, file_url, form, origin_form = handle_uploaded_file(file1, "uploads/xls")
+    ret,file_name, file_url, form, origin_form = handle_uploaded_file(file1, "uploads/xls", start_time, end_time)
 
     # if os.path.exists(file_name):
 
@@ -64,6 +71,8 @@ def _upload_xls(request):
     ctx['file_url'] = file_url
     ctx['form'] = form
     ctx['origin_form'] = origin_form
+    ctx['start_time'] = start_time
+    ctx['end_time'] = end_time
     return render_to_response("xls/xls_download.html", ctx, context_instance=RequestContext(request))
 
 @csrf_exempt

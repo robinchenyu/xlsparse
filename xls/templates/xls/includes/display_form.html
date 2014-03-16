@@ -1,0 +1,23 @@
+<table class="table table-striped" >
+  {% for row in form %}
+  {% if forloop.first %}
+  <thead>
+    <tr class="size-row">
+      {% for cell in row %}
+      <th class="floatThead-col">{{ cell }}</th>
+      {% endfor %}
+    </tr>
+  </thead>
+  {% else %}
+  <tbody>
+    <tr>
+      {% for cell in row %}
+        <td style="color:{{ cell.color }};">{{ cell }} </td>
+      {% endfor %}
+    </tr>
+  </tbody>
+  {% endif %}
+
+  {% endfor %}
+
+</table>

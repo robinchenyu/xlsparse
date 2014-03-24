@@ -91,7 +91,7 @@ def resolv(file1, start, end):
                                         origin_row.append(cell.encode("utf-8"))
 					continue
 
-				timelist = cell.split('\r\n')
+				timelist = cell.split('\n')
 				ms = check([time_to_int(x) for x in timelist if len(x) > 3], BEGIN_TIME, END_TIME)
 				times = '|'.join([str(time_to_int(x)) for x in timelist if len(x) > 3])
 				# print "Column label at (rowx=%d, colx=%d) is %d" %\
@@ -128,8 +128,8 @@ if __name__ == '__main__':
                                         form_row.append(cell.encode('utf-8'))
 					continue
 
-				timelist = cell.split('\r\n')
-				ms = check([time_to_int(x) for x in timelist if len(x) > 3])
+				timelist = cell.split('\n')
+				ms = check([time_to_int(x) for x in timelist if len(x) > 3], '08:00', '19:00')
 				times = '|'.join([str(time_to_int(x)) for x in timelist if len(x) > 3])
 				print "Column label at (rowx=%d, colx=%d) is %d" %\
 					(rx, cx, ms)

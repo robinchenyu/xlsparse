@@ -37,6 +37,7 @@
         <ul class="nav nav-tabs" id="myTab">
           <li class=""><a data-toggle="tab" href="#home">原始数据</a></li>
           <li class="active"><a data-toggle="tab" href="#profile">时间</a></li>
+          <li class=""><a data-toggle="tab" href="#down1">下载结果</a></li>
         </ul>
         <div class="tab-content" id="myTabContent">
           <div id="home" class="tab-pane fade">
@@ -45,36 +46,39 @@
           <div id="profile" class="tab-pane fade active in">
             {% display_form form "time" %}
           </div>
+          <div id="down1" class="tab-pane fade">
+            <div class="col-xs-6 col-md-4">
+              <form class="form-horizontal" role="form" method="POST" action="" name='xls_file' id='submitForm' enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                  <label for="start_time" class="col-sm-2 control-label">start time</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="start_time" placeholder="{{ start_time }}" name="start_time">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="end_time" class="col-sm-2 control-label">end time</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="end_time" placeholder="{{ end_time }}" name="end_time">
+                  </div>
+                </div>
+                <input type='file' name='file' id='file' />
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">重新计算</button>
+                  </div>
+                </div>
+              </form>
+              <a href="{{file_url}}">结果文件{{file_name}}</a>
+
+
+            </div>
+          </div>
         </div>
 
       </div>
 
-      <div class="col-xs-6 col-md-4">
-        <form class="form-horizontal" role="form" method="POST" action="" name='xls_file' id='submitForm' enctype="multipart/form-data">
-          {% csrf_token %}
-          <div class="form-group">
-            <label for="start_time" class="col-sm-2 control-label">start time</label>
-            <div class="col-sm-10">
-              <input type="text" class="form-control" id="start_time" placeholder="{{ start_time }}" name="start_time">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="end_time" class="col-sm-2 control-label">end time</label>
-            <div class="col-sm-10">
-              <input type="text" class="form-control" id="end_time" placeholder="{{ end_time }}" name="end_time">
-            </div>
-          </div>
-          <input type='file' name='file' id='file' />
-          <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-              <button type="submit" class="btn btn-default">Upload</button>
-            </div>
-          </div>
-        </form>
-        <a href="{{file_url}}">{{file_name}}</a>
 
-
-      </div>
     </div>
 
 

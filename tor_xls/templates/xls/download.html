@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Download</title>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" language="javascript">
+     $('table.demo2').floatThead();
+    </script>
+
+
+  </head>
+
+
+
+
+  <body>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-8">
+
+        <ul class="nav nav-tabs" id="myTab">
+          <li class=""><a data-toggle="tab" href="#home">原始数据</a></li>
+          <li class="active"><a data-toggle="tab" href="#profile">时间</a></li>
+          <li class=""><a data-toggle="tab" href="#down1">重新计算</a></li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div id="home" class="tab-pane fade">
+            <p> 中午11:45到12:30有打卡记录的标记为<tt style="color:blue;">蓝色</tt> </p>
+            {% module Template("display_form.html", form=origin_form, t = "time", start_launch_time = start_launch_time, end_launch_time=end_launch_time, work_minutes=work_minutes) %}
+          </div>
+          <div id="profile" class="tab-pane fade active in">
+            <p> 单位:分， 一天工时小于190分钟的标记为<tt style="color:red;">红色</tt>
+            <a href="{{file_url}}">下载</a>
+            </p>
+            {% module Template("display_form.html", form=form, t = "hour", start_launch_time = start_launch_time, end_launch_time=end_launch_time, work_minutes=work_minutes) %}
+          </div>
+          <div id="down1" class="tab-pane fade">
+            <div class="col-xs-6 col-md-4">
+              {% module Template("upload_form.html") %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

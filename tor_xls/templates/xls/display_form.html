@@ -1,0 +1,28 @@
+<table class="table table-striped" >
+  {% from tags import color %}
+  {% for i,row in enumerate(form) %}
+  {% if i == 0 %}
+  <thead>
+    <tr class="size-row">
+      {% for cell in row %}
+      <th class="floatThead-col">{{ cell }}</th>
+      {% end %}
+    </tr>
+  </thead>
+  {% else %}
+  <tbody>
+    <tr>
+      {% for j,cell in enumerate(row) %}
+        {% if j > 1 %}
+          <td style="color:{{ color(cell, t, start_launch_time, end_launch_time, work_minutes) }};">{{ cell }} </td>
+        {% else %}
+          <td style="color:black;">{{ cell }} </td>
+        {% end %}
+      {% end %}
+    </tr>
+  </tbody>
+  {% end %}
+
+  {% end %}
+
+</table>

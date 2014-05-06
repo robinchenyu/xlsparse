@@ -1,0 +1,22 @@
+POST / HTTP/1.1
+soapAction: ""
+x-mmsc-msg-from: mm7
+Mime-Version: 1.0
+Content-Type: text/xml; charset=utf-8
+Content-Transfer-Encoding: 8bit
+User-Agent: MMSC Simulator
+Host: 10.116.40.67:8888
+Content-Length: 803
+Cache-Control: no-cache
+
+<?xml version="1.0" encoding="GB2312"?><env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Header><mm7:TransactionID xmlns:mm7="http://www.3gpp.org/ftp/Specs/archive/23_series/23.140/schema/REL-6-MM7-1-0" env:mustUnderstand="1">2014-3-24-11-37-3-5</mm7:TransactionID></env:Header><env:Body><DeliveryReportReq xmlns="http://www.3gpp.org/ftp/Specs/archive/23_series/23.140/schema/REL-6-MM7-1-0"><MM7Version>6.3.0</MM7Version><MMSRelayServerID>902500</MMSRelayServerID><MessageID>032411370390250000002</MessageID><Recipient><Number>13527537125</Number></Recipient><Sender>13800230500</Sender><TimeStamp>2014-3-24T11:3:37+08:00</TimeStamp><MMStatus>Retrieved</MMStatus><MMSStatusErrorCode>129</MMSStatusErrorCode><StatusText>OK</StatusText></DeliveryReportReq></env:Body></env:Envelope>
+
+POST / HTTP/1.1
+Content-Length: 828
+Accept-Encoding: gzip
+Host: 10.116.40.67:8888
+User-Agent: MMSC Simulator
+Connection: close
+Content-Type: application/x-www-form-urlencoded
+
+<?xml version="1.0" encoding="GB2312"?><env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Header><mm7:TransactionID xmlns:mm7="http://www.3gpp.org/ftp/Specs/archive/23_series/23.140/schema/REL-6-MM7-1-0" env:mustUnderstand="1">7a91a79a29464c58a08215e7800df6b3</mm7:TransactionID></env:Header><env:Body><DeliveryReportReq xmlns="http://www.3gpp.org/ftp/Specs/archive/23_series/23.140/schema/REL-6-MM7-1-0"><MM7Version>6.3.0</MM7Version><MMSRelayServerID>902500</MMSRelayServerID><MessageID>a8f68a77abd048acb6c9d3da38c5b1eb</MessageID><Recipient><Number>13800230500</Number></Recipient><Sender>13527537125</Sender><TimeStamp>2014-3-24T10:34:50+08:00</TimeStamp><MMStatus>Retrieved</MMStatus><MMSStatusErrorCode>129</MMSStatusErrorCode><StatusText>OK</StatusText></DeliveryReportReq></env:Body></env:Envelope>
